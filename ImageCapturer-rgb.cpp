@@ -320,9 +320,9 @@ public:
 		osg::Camera::BufferAttachmentMap& map = rrt_cam->getBufferAttachmentMap();
 		
 		// RGB
-		// const osg::Camera::Attachment& att = map[osg::Camera::COLOR_BUFFER0];
+		const osg::Camera::Attachment& att = map[osg::Camera::COLOR_BUFFER0];
 		// DEPTH
-		const osg::Camera::Attachment& att = map[osg::Camera::DEPTH_BUFFER];
+		// const osg::Camera::Attachment& att = map[osg::Camera::DEPTH_BUFFER];
 
 		osg::Texture2D* scene_tex = dynamic_cast<osg::Texture2D*> (att._texture.get());
 

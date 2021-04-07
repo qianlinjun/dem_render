@@ -118,6 +118,8 @@ int main( int argc, char **argv )
     
     std::string point_name = argv[9];
 
+    float image_headig = atof(argv[10]);
+
     //////////////////////////////////////////////////////////////////////////
 	// Render images.
     // ImageCapturer::GridTileExtent(ext_min, ext_max)
@@ -130,7 +132,7 @@ int main( int argc, char **argv )
 
 
     // ImageCapturer capturer(condition, terrainNode, shpNode, 4);
-    ImageCapturer capturer(condition, terrainNode, 4);
+    ImageCapturer capturer(condition, terrainNode, 4, image_headig);
     std::cout<<"capturing "<<std::endl;
 
 	if (!capturer.capture()) {

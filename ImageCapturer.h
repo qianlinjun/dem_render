@@ -99,7 +99,7 @@ public:
 		_terrain_node_bb_info._terrain_technique_transform_mat = cbv.getLastTransformMatrix();
 	}
 
-	inline ImageCapturer(const CapturingCondition& cap_cond, osg::Node* terrain_node, int view_num) : _cap_cond(cap_cond), _terrain_node(terrain_node), _view_num(view_num){
+	inline ImageCapturer(const CapturingCondition& cap_cond, osg::Node* terrain_node, int view_num, float image_headig) : _cap_cond(cap_cond), _terrain_node(terrain_node), _view_num(view_num), _image_headig(image_headig){
 
 		SaveTransformMatrixComputeBoundingboxVisitor cbv;
 
@@ -195,6 +195,7 @@ private:
 	ImageContainer							_img_container;
 
 	int										_view_num;
+	float                                _image_headig;
 };
 
 #endif // IMAGE_CAPTURER_H
